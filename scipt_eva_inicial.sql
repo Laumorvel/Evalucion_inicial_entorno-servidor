@@ -134,11 +134,11 @@ SELECT COUNT(especie) FROM mascotas WHERE especie = 'perro';
 --nombre de veterinarios que trabajan en la clinica de codigo 13 (no todas las personas son veterinarios)
 SELECT DISTINCT p.nombre AS nombre_veterinarios FROM personas p, veterinarios v WHERE p.codigo_pers = v.codigo_pers AND p.cod_clinica = 13;
 
---número de veterinarios por clínica
+-- JOIN - número de veterinarios por clínica
 SELECT COUNT(cv.codigo_vete) AS NÚMERO_VETERINARIOS, c.nombre  AS CLÍNICAS FROM clinicas_veterinarios cv, clinicas c 
 WHERE c.codigo_clinic = cv.codigo_clinica GROUP BY c.nombre;
 
---personas que no son veterinarios
+-- SUBCONSULTA - personas que no son veterinarios
 SELECT p.nombre AS nombre_no_veterinarios FROM personas p WHERE p.codigo_pers 
 NOT IN (SELECT v.codigo_pers FROM veterinarios v);
 
