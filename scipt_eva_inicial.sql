@@ -19,7 +19,7 @@ CREATE TABLE clinicas(
 
 CREATE TABLE personas(
 	codigo_pers	number(2) constraint pk_personas primary key,
-    cod_clinica number(2) constraint fk_clinica references clinicas,
+    cod_clinica number(2) constraint fk_clinica references clinicas NOT NULL,
 	dni	varchar2(9) not null,
 	nombre	varchar2(30),
 	apellidos varchar2(50),

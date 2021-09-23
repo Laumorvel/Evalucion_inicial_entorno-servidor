@@ -2,6 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Birthstone&family=PT+Sans+Narrow&display=swap');
     * {
         font-family: 'Bebas Neue', cursive;
+        position: relative;
     }
     
     .container {
@@ -16,6 +17,7 @@
         overflow: hidden;
         background-color: #f1f1f1;
         padding: 20px 10px;
+        max-height: 50px;
     }
     
     header a {
@@ -29,9 +31,12 @@
         border-radius: 4px;
     }
     
-    header a.logo {
-        font-size: 25px;
-        font-weight: bold;
+    .logo {
+        height: 80px;
+        width: 80px;
+        float: none;
+        display: block;
+        float: left;
     }
     
     header a:hover {
@@ -82,13 +87,54 @@
         text-align: center;
     }
     
-    footer {
-        padding: auto;
+    .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        padding: 0;
+        background-color: #ddd;
+        padding-top: 6px;
+        margin: 0;
     }
     
-    .contenido {}
+    .footer a {
+        float: center;
+        color: black;
+        text-align: center;
+        margin-left: 20%;
+        border-top: 5px;
+        text-decoration: none;
+    }
     
-    .box {
+    .titulos_body {}
+    
+    .contenido {
+        min-width: 50em;
+        min-height: 37.9em;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .caja {
         backdrop-filter: blur(10px);
-        float: left
+        float: left;
+        margin: 9%;
+        margin-top: 12%;
+        text-align: center;
+        height: 7em;
+        border-radius: 30px;
+    }
+    
+    .caja a {
+        text-align: center;
+        text-decoration: none;
+        color: rgb(7, 7, 7);
+        font-size: 40px;
+        position: inherit;
+    }
+    
+    .texto_caja {
+        text-align: center;
+        margin-top: 33px;
     }
