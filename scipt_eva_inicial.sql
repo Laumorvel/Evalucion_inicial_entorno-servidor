@@ -29,7 +29,7 @@ CREATE TABLE personas(
 
 CREATE TABLE mascotas(
     codigo_mas	number(2) constraint pk_mascotas primary key,
-    codigo_duenyo number(2) constraint fk_duenyo references personas, --una persona puede tener +1 mascota y la mascota siempre un dueño. No es necesario crea otra tabla.
+    codigo_duenyo number(2) constraint fk_duenyo references personas NOT NULL, --una persona puede tener +1 mascota y la mascota siempre un dueño. No es necesario crea otra tabla.
                                                                       --(aparecería aquí repetido su código en tantas columnas como mascotas tenga).
     nombre	varchar2(30) not null,
 	fecha_nacimiento date,
